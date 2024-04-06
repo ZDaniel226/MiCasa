@@ -1,0 +1,15 @@
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="rooms-grid">
+      <ion-card *ngFor="let room of rooms" class="room-card" (click)="toggleLight(room)" [style.background-color]="room.light ? 'lightgreen' : 'white'">
+        <ion-card-header>
+          <ion-card-title>{{ room.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-icon name="bulb-outline"></ion-icon>
+          <p>{{ room.light ? 'Encendido' : 'Apagado' }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
